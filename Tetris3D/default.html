@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tetris3D</title>
+
+    <!-- WinJS references -->
+    <!-- At runtime, ui-themed.css resolves to ui-themed.light.css or ui-themed.dark.css 
+    based on the user’s theme setting. This is part of the MRT resource loading functionality. -->
+    <link href="/css/ui-themed.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <!-- Tetris3D references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+</head>
+<body class="phone">
+    <div id="benjoffe">
+        <h1>Ben Joffe</h1>
+        <div id="content">
+            <div id="loading">
+                You must enable JavaScript to play this game！
+            </div>
+            <script type="text/javascript">
+                if (!window.CanvasRenderingContext2D) {
+                    document.getElementById('loading').innerHTML = 'Your browser doesn\'t support canvas,if you are using IE then the <a href="v1/">older version</a> will likely work.<br>';
+                } else {
+                    document.getElementById('loading').innerHTML = '<img src="images/loading.gif" alt"" style="width:16px;height:16px;vertical-align:top;">loading game...';
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
